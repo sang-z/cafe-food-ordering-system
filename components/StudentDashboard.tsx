@@ -95,11 +95,11 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-brand-dark dark:bg-brand-light rounded-lg flex items-center justify-center text-white dark:text-brand-dark font-bold text-lg">
+              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                 L
               </div>
               <div className="flex flex-col">
-                <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-dark to-purple-600 dark:from-brand-light dark:to-white leading-none">
+                <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 leading-none">
                   LoL cafe
                 </h1>
                 <span className="text-xs text-gray-500 dark:text-gray-400">Welcome, {studentId}</span>
@@ -114,7 +114,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
                   placeholder="Search food..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-gray-100 dark:bg-gray-700 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-brand-dark w-64 transition-all text-gray-900 dark:text-white dark:placeholder-gray-400"
+                  className="bg-gray-100 dark:bg-gray-700 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 w-64 transition-all text-gray-900 dark:text-white dark:placeholder-gray-400"
                 />
               </div>
 
@@ -154,7 +154,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
                   {isDarkMode ? <SunIcon className="w-5 h-5" /> : <MoonIcon className="w-5 h-5" />}
                 </button>
 
-                <button onClick={onLogout} className="text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-brand-dark dark:hover:text-brand-light">
+                <button onClick={onLogout} className="text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400">
                   Logout
                 </button>
               </div>
@@ -164,14 +164,14 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
       </nav>
 
       {/* Hero / Banner */}
-      <div className="bg-brand-dark text-white py-12 px-4 relative overflow-hidden">
+      <div className="bg-indigo-900 text-white py-12 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] opacity-20 bg-cover bg-center" />
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Fuel Your Studies</h2>
-          <p className="text-brand-light text-lg max-w-xl mb-6">Order fresh food from the canteen and skip the line.</p>
+          <p className="text-indigo-200 text-lg max-w-xl mb-6">Order fresh food from the canteen and skip the line.</p>
           <button 
              onClick={() => document.getElementById('menu-section')?.scrollIntoView({ behavior: 'smooth'})}
-             className="bg-white text-brand-dark px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
+             className="bg-white text-indigo-900 px-6 py-3 rounded-full font-bold hover:bg-indigo-50 transition-colors inline-flex items-center gap-2"
           >
             Order Now
           </button>
@@ -187,7 +187,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
             onClick={() => setActiveCategory('All')}
             className={`px-5 py-2 rounded-full whitespace-nowrap text-sm font-medium transition-colors border ${
               activeCategory === 'All' 
-                ? 'bg-brand-dark text-white border-brand-dark' 
+                ? 'bg-indigo-600 text-white border-indigo-600' 
                 : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
             }`}
           >
@@ -199,7 +199,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full whitespace-nowrap text-sm font-medium transition-colors border ${
                 activeCategory === cat 
-                  ? 'bg-brand-dark text-white border-brand-dark' 
+                  ? 'bg-indigo-600 text-white border-indigo-600' 
                   : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
@@ -221,7 +221,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
           {filteredItems.length === 0 && (
              <div className="col-span-full text-center py-20 text-gray-400">
                 <p className="text-xl">No items found matching your filters.</p>
-                <button onClick={() => {setSearchQuery(''); setActiveCategory('All');}} className="mt-4 text-brand-dark dark:text-brand-light hover:underline">Clear Filters</button>
+                <button onClick={() => {setSearchQuery(''); setActiveCategory('All');}} className="mt-4 text-indigo-600 dark:text-indigo-400 hover:underline">Clear Filters</button>
              </div>
           )}
         </div>
@@ -231,7 +231,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
       <footer className="mt-12 py-8 flex justify-center">
         <button 
           onClick={() => setIsAboutOpen(true)}
-          className="text-gray-500 dark:text-gray-400 hover:text-brand-dark dark:hover:text-brand-light font-medium text-sm transition-colors border-b border-transparent hover:border-brand-dark"
+          className="text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium text-sm transition-colors border-b border-transparent hover:border-indigo-600"
         >
           About Us
         </button>
@@ -242,9 +242,9 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 md:hidden">
            <button 
              onClick={() => setIsCartOpen(true)}
-             className="bg-brand-dark text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-3 active:scale-95 transition-transform"
+             className="bg-gray-900 dark:bg-gray-700 text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-3 active:scale-95 transition-transform"
            >
-             <div className="bg-white/20 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">{cartCount}</div>
+             <div className="bg-gray-700 dark:bg-gray-900 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">{cartCount}</div>
              <span className="font-medium">View Tray</span>
            </button>
         </div>
@@ -257,7 +257,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
           <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden flex flex-col animate-scale-in">
              <div className="p-5 border-b dark:border-gray-700 flex items-center justify-between bg-gray-50 dark:bg-gray-800">
                <div className="flex items-center gap-2">
-                 <ClockIcon className="w-6 h-6 text-brand-dark dark:text-brand-light" />
+                 <ClockIcon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                  <h2 className="text-xl font-bold text-gray-800 dark:text-white">My Orders</h2>
                </div>
                <button onClick={() => setIsOrdersOpen(false)} className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-colors">
@@ -320,7 +320,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
               </div>
               <div className="p-8 text-center space-y-6">
                  <div>
-                    <h3 className="text-3xl font-extrabold text-brand-dark dark:text-brand-light mb-2">CAS VDY</h3>
+                    <h3 className="text-3xl font-extrabold text-indigo-700 dark:text-indigo-400 mb-2">CAS VDY</h3>
                  </div>
                  
                  <div className="border-t border-gray-100 dark:border-gray-700 pt-6">
@@ -346,7 +346,7 @@ const StudentDashboard: React.FC<StudentDashboardProps> = ({
                         ))}
                     </div>
                     <p className="text-xs text-gray-400 mt-6">Dept. of Computer Science</p>
-                    <p className="text-xs text-gray-300 dark:text-gray-600 mt-2">© 2024 CAS VDY. All rights reserved.</p>
+                    <p className="text-xs text-gray-300 mt-2">© 2025 CAS VDY. All rights reserved.</p>
                  </div>
               </div>
            </div>
